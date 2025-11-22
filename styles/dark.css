@@ -3,6 +3,18 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+@media(prefers-color-scheme: dark) {
+  :root {
+    --accent-color: rgba(255, 0, 112, 1);
+    --bg-theme-image: url('../images/cover-image-dark.png');
+    --bg-theme-color: rgba(0, 0, 40, 1);
+    --head-title-color: rgba(219, 0, 255, 1);
+    --title-decor-color: rgba(0, 0, 40, 1);
+    --title-bg-color: rgba(255, 0, 112, 1);
+    --section-title-color: rgba(255, 0, 112, 1);
+    --card-paragraph-color: rgba(241, 178, 206, 1);
+  }
+}
 
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.

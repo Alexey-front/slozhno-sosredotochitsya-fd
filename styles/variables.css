@@ -2,3 +2,11 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --margin-page: 10px;
+  --header-title-margin-left: 0;
+  --header-margin-bot: 40px;
+  --section-margin-bot: 50px;
+  --section-img-gap: 10px;
+  --section-img-margin-bot: 40px;
+}
