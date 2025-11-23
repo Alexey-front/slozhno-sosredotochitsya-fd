@@ -57,7 +57,7 @@
     </header>
     <main>
 
-      <section class="section">
+      <section class="section section--layout">
         <h2 class="section__title">Почему сосредоточиться так сложно</h2>
         <ul class="cards__list">
           <li class="cards__list-item">
@@ -95,7 +95,7 @@
 
       <section class="section">
         <h2 class="section__title">Что снижает концентрацию внимания?</h2>
-        <ul class="cards__list">
+        <ul class="cards__list cards__list_concentration">
           <li class="cards__list-item">
             <h3 class="cards__title title-decor">Многозадачность</h3>
             <p class="cards__paragraph">
@@ -132,13 +132,14 @@
         </ul>
       </section>
 
-      <section class="section">
+      <section class="section section--layout">
         <h2 class="section__title">
           Как концентрироваться лучше, чем золотая 
           рыбка (то есть дольше трёх секунд)
         </h2>
-        <h3 class="cards__title title-decor">5 простых (на самом деле не очень) советов</h3>
-        <ul class="cards__list">
+        <div>
+        <h3 class="cards__title title-decor cards__title--margin-bot">5 простых (на самом деле не очень) советов</h3>
+        <ul class="cards__list cards__list--columns--layout">
           <li class="cards__list-item">
             <h3 class="cards__title title-decor cards__title--weight--regular">Представьте небо и облака</h3>
             <p class="cards__paragraph">
@@ -194,20 +195,25 @@
             </p>
           </li>
         </ul>
+      </div>
       </section>
 
       <section class="section__images">
-        <h2 class="section__title"> А можно в картинках?</h2>
+        <h2 class="cards-title title-decor"> А можно в картинках?</h2>
         <ul class="cards__list">
-          <li class="cards__list-item"> <img class="image" src="./images/sunset.png" alt="Пляж на фоне гор и заката." loading="lazy"> </li>
-          <li class="cards__list-item"> <img class="image" src="./images/ice-cream.png" alt="Миска со сладостями и фруктами." loading="lazy"> </li>
-          <li class="cards__list-item"> <img class="image" src="./images/tape.png" alt="Кассета для аудиоплеера." loading="lazy"> </li>
-          <li class="cards__list-item"> <img class="image" src="./images/books.png" alt="Груда друг на друга заставленных книг, в самом верху чашка кофе." loading="lazy"> </li>
-          <li class="cards__list-item"> <img class="image" src="./images/street.png" alt="Узкая улица с домами по бокам." loading="lazy"> </li>
+          <li class="cards__list-item sunset-area"> <img class="image" src="./images/sunset.png" alt="Пляж на фоне гор и заката." loading="lazy"> </li>
+          <li class="cards__list-item ice-cream-area"> <img class="image" src="./images/ice-cream.png" alt="Миска со сладостями и фруктами." loading="lazy"> </li>
+          <li class="cards__list-item tape-area"> <img class="image" src="./images/tape.png" alt="Кассета для аудиоплеера." loading="lazy"> </li>
+          <li class="cards__list-item books-area"> <img class="image" src="./images/books.png" alt="Груда друг на друга заставленных книг, в самом верху чашка кофе." loading="lazy"> </li>
+          <li class="cards__list-item street-area"> <img class="image" src="./images/street.png" alt="Узкая улица с домами по бокам." loading="lazy"> </li>
         </ul>
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <span aria-hidden="true" class="border-decor-element-up"></span>
+      <span aria-hidden="true" class="border-decor-element-bot"></span>
+      <h2 class="footer__title" aria-hidden="true">focus</h2>
+    </footer>
   </body>
 </html>

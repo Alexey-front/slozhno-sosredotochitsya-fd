@@ -3,10 +3,86 @@
   и их переопределение под различные устройства
 */
 :root {
+  --accent-color: rgba(255, 0, 112, 1);
+  --bg-theme-image: url('../images/cover-image-dark.png');
+  --bg-theme-color: rgba(0, 0, 40, 1);
+  --head-title-color: rgba(219, 0, 255, 1);
+  --title-decor-color: rgba(0, 0, 40, 1);
+  --title-bg-color: rgba(255, 0, 112, 1);
+  --section-title-color: rgba(255, 0, 112, 1);
+  --card-paragraph-color: rgba(241, 178, 206, 1);
   --margin-page: 10px;
   --header-title-margin-left: 0;
   --header-margin-bot: 40px;
   --section-margin-bot: 50px;
   --section-img-gap: 10px;
   --section-img-margin-bot: 40px;
+  --font-size-titles: 116px;
+}
+
+@media (min-width: 375px) {
+  :root {
+    --font-size-titles: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    --section-margin-bot: clamp(50px, calc(21.374px + 7.634vw), 80px);;
+  }
+}
+
+@media (min-width: 768px) {  
+   :root {
+    --font-size-titles: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --span-text--block: block;
+    --section-img-margin-bot: 60px;
+    --section-img-gap: 20px;
+    --margin-page: 20px;
+    --header-margin-bot: 60px;
+   }
+    .section--layout { 
+      grid-template-columns: min-content 1fr;
+}
+    .cards__list--columns--layout {
+      grid-column: 2;
+    }
+    .cards__title--margin-bot {
+      margin-block-end: 20px;
+    }
+    .section__title {
+      width: clamp(236px, calc(-1px + 30.859vw), 315px);
+    }
+    .sunset-area {
+  grid-area: sunset; 
+}
+
+.ice-cream-area {
+  grid-area: ice-cream;
+}
+
+.tape-area {
+  grid-area: tape;
+}
+
+.books-area {
+  grid-area: books;
+}
+
+.street-area {
+  grid-area: street;
+}
+    .section__images .cards__list {
+      grid-template-areas: "sunset sunset ice-cream"
+                           "tape books ice-cream"
+                           "tape street street";
+      grid-template-rows: 3;
+      grid-template-columns: 3;
+    }
+
+}
+
+
+@media (min-width: 1024px) { 
+   :root {
+    --font-size-titles: clamp(9.8125rem, 6.7356rem + 4.8077vw, 11.0625rem);
+   }
+   .cards__list_concentration {
+  grid-template-columns: repeat(3, 1fr);
+}  
 }
