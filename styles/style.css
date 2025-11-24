@@ -1,6 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-* {
-  text-wrap-style: pretty;
+@supports(text-wrap-style: pretty) {
+  .page {
+    text-wrap-style: pretty;
+  }
 }
 
 .page {
