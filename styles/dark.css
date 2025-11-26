@@ -1,5 +1,6 @@
 :root.theme-dark {
   --accent-color: rgba(255, 0, 112, 1);
+  --decor-color: rgba(255, 0, 112, 1);
   --bg-theme-image: url("../images/cover-image-dark.png");
   --bg-theme-color: rgba(0, 0, 40, 1);
   --head-title-color: rgba(219, 0, 255, 1);

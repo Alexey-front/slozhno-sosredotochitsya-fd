@@ -4,6 +4,7 @@
 */
 :root {
   --accent-color: rgba(255, 0, 112, 1);
+  --decor-color: rgba(255, 0, 112, 1);
   --bg-theme-image: url("../images/cover-image-dark.png");
   --bg-theme-color: rgba(0, 0, 40, 1);
   --head-title-color: rgba(219, 0, 255, 1);
@@ -24,7 +25,7 @@
   --rec-inset: 10px;
   --header-columns: 1fr;
   --header-rows: auto;
-  --header-paragraph-layout: -15px;
+  --header-paragraph-layout: -12px;
   --menu-list-flex-direction: column;
   --header-span-inline-size: 320px;
   --theme-menu-justify: end;
@@ -39,14 +40,9 @@
   }
 }
 
-@media (min-width: 390px) {
-  .header__paragraph--layout {
-    margin-inline-start: var(--margin-inline-paragraph);
-  }
-}
-
 @media (min-width: 768px) {
   :root {
+    --section-concentration-title-layout: 0.3242fr;
     --margin-inline-paragraph: 0;
     --font-size-titles: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --span-text--block: block;
@@ -62,62 +58,11 @@
     --header-padding-top: 2px;
     --header-paragraph-layout: 41px;
   }
-  .header {
-    grid-template-areas:
-      "menu menu"
-      "title title"
-      ". paragraph";
-  }
-
-  .header__title {
-    align-self: center;
-  }
-  .section__images .cards__list-item:nth-child(1) {
-    grid-area: sunset;
-  }
-  .section__images .cards__list-item:nth-child(2) {
-    grid-area: ice-cream;
-  }
-  .section__images .cards__list-item:nth-child(3) {
-    grid-area: tape;
-  }
-  .section__images .cards__list-item:nth-child(4) {
-    grid-area: books;
-  }
-  .section__images .cards__list-item:nth-child(5) {
-    grid-area: street;
-  }
-  .menu-area {
-    grid-area: menu;
-  }
-  .paragraph-area {
-    grid-area: paragraph;
-  }
-  .title-area {
-    grid-area: title;
-  }
-  .section--layout {
-    grid-template-columns: min-content 1fr;
-  }
-  .cards__list--columns--layout {
-    grid-column: 2;
-  }
-  .cards__title--margin-bot {
-    margin-block-end: 20px;
-  }
-  .section__title {
-    width: clamp(236px, calc(-1px + 30.859vw), 315px);
-  }
-  .section__images .cards__list {
-    grid-template-areas:
-      "sunset sunset ice-cream"
-      "tape books ice-cream"
-      "tape street street";
-  }
 }
 
 @media (min-width: 1024px) {
   :root {
+    --section-concentration-title-layout: 0.32fr;
     --font-size-titles: clamp(9.8125rem, 6.7356rem + 4.8077vw, 11.0625rem);
     --menu-list-flex-direction: row;
     --theme-menu-justify: center;
@@ -125,12 +70,5 @@
     --header-span-inline-size: 100%;
     --header-paragraph-layout: 51px;
     --header-padding-top: 1px;
-  }
-  .cards__list_concentration {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .header__theme-menu {
-    justify-self: center;
-    align-self: start;
   }
 }

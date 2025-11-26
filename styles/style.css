@@ -1,10 +1,4 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-@supports (text-wrap-style: pretty) {
-  .page {
-    text-wrap-style: pretty;
-  }
-}
-
 .page {
   padding-inline-start: var(--margin-page);
   padding-inline-end: var(--margin-page);
@@ -55,30 +49,32 @@
   aspect-ratio: 1 / 1;
 }
 
-.border-decor-element-up,
-.border-decor-element-bot {
+.decorated-zone::after,
+.decorated-zone::before {
   position: absolute;
-  display: var(--decor-element-block);
+  display: block;
   aspect-ratio: 1 / 1;
   block-size: 24px;
 }
 
-.border-decor-element-up {
-  border-top: 1px solid rgba(255, 0, 112, 1);
-  border-right: 1px solid rgba(255, 0, 112, 1);
+.decorated-zone::after {
+  content: "";
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
   inset-inline-end: 0;
   inset-block-start: var(--decor-element-inset);
 }
 
-.border-decor-element-bot {
-  border-bottom: 1px solid rgba(255, 0, 112, 1);
-  border-left: 1px solid rgba(255, 0, 112, 1);
+.decorated-zone::before {
+  content: "";
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
   inset-block-end: var(--decor-element-inset);
 }
 
 .header__title {
   margin-inline-start: var(--header-title-margin-left);
-  padding-block-start: var(--header-padding-top);
+  margin-block-start: var(--header-padding-top);
   color: var(--head-title-color);
   font-family: "IBM Plex mono", monospace;
   font-weight: 700;
@@ -158,13 +154,18 @@
   line-height: 23.4px;
 }
 
+.section-concentration__title--layout {
+  display: grid;
+  grid-template-columns: var(--section-concentration-title-layout);
+}
+
 .link {
   text-decoration: none;
   text-shadow: 2px 1px 0 var(--accent-color);
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 .link:focus {
@@ -219,7 +220,7 @@
   border: 1px solid transparent;
   padding: 1px 12px 4.5px 12px;
   color: var(--section-title-color);
-  font-family: IBM Plex Mono;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -242,4 +243,72 @@
 }
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid currentColor;
+}
+
+@media (min-width: 390px) {
+  .header__paragraph--layout {
+    margin-inline-start: var(--margin-inline-paragraph);
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    grid-template-areas:
+      "menu menu"
+      "title title"
+      ". paragraph";
+  }
+
+  .header__title {
+    align-self: center;
+  }
+  .section__images .cards__list-item:nth-child(1) {
+    grid-area: sunset;
+  }
+  .section__images .cards__list-item:nth-child(2) {
+    grid-area: ice-cream;
+  }
+  .section__images .cards__list-item:nth-child(3) {
+    grid-area: tape;
+  }
+  .section__images .cards__list-item:nth-child(4) {
+    grid-area: books;
+  }
+  .section__images .cards__list-item:nth-child(5) {
+    grid-area: street;
+  }
+  .menu-area {
+    grid-area: menu;
+  }
+  .paragraph-area {
+    grid-area: paragraph;
+  }
+  .title-area {
+    grid-area: title;
+  }
+  .section--layout {
+    grid-template-columns: 1fr 2fr;
+  }
+  .cards__title--margin-bot {
+    margin-block-end: 20px;
+  }
+  .section__images .cards__list {
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+}
+
+@media (min-width: 1024px) {
+  .section--layout {
+    grid-template-columns: 1fr 2.06fr;
+  }
+  .cards__list_concentration {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
 }

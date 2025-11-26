@@ -1,6 +1,6 @@
 :root.theme-light {
   --accent-color: rgba(255, 141, 203, 1);
-  --bg-theme-image: none;
+  --bg-theme-image: url("../images/cover-image-light.png");
   --bg-theme-color: rgba(255, 241, 247, 1);
   --head-title-color: rgba(255, 194, 230, 1);
   --title-decor-color: rgba(53, 52, 48, 1);
@@ -9,12 +9,13 @@
   --card-paragraph-color: rgba(53, 52, 48, 1);
   --decor-element-block: none;
   --hover-button-border-color: rgba(50, 49, 45, 0.4);
+  --decor-color: rgba(53, 52, 48, 1);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: rgba(255, 141, 203, 1);
-    --bg-theme-image: none;
+    --bg-theme-image: url("../images/cover-image-light.png");
     --bg-theme-color: rgba(255, 241, 247, 1);
     --head-title-color: rgba(255, 194, 230, 1);
     --title-decor-color: rgba(53, 52, 48, 1);

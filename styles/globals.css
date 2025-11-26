@@ -12,6 +12,10 @@ body {
   max-inline-size: 1440px;
 }
 
+html {
+  width: 100%
+}
+
 h1,
 h2,
 h3,
